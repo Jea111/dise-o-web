@@ -20,22 +20,9 @@ body {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin: 1rem;
   width: 30%;
+  height: 30%;
   text-align: center;
   padding: 1rem;
-}
-
-.container {
-  display: flex; /*  pantalla flexible  */
-  flex-direction: row; /*  dirección de los elementos  */
-  align-items: center; /*  alineación central  */
-  height: 100px; /*  altura del contenedor  */
-  list-style: none; /*  lista sin viñetas  */
-  justify-content: space-between; /*  alineación horizontal  */
-  background-color: rgb(19, 3, 20); /*  color de fondo  */
-  padding-left: 30px; /*  relleno izquierdo  */
-  padding-right: 30px; /*  relleno derecho  */
-  text-transform: uppercase; /*  texto en mayúsculas  */
-  font-size: 23px; /*  tamaño de fuente  */
 }
 .btn {
   background-color: black;
@@ -50,9 +37,27 @@ body {
 .label,
 h3,
 input,
-search {
+p {
   font-size: 32px;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   border-radius: 15px;
   border: #6518be;
+}
+img {
+  width: 100%;
+  height: 100%;
+}
+header,
+h1 {
+  display: flex; /*  pantalla flexible  */
+  font-family: "Big Shoulders Stencil", cursive;
+  color: #be1865;
+  align-items: center; /*  alineación central  */
+  height: 80px; /*  altura del contenedor  */
+
+  justify-content: space-between; /*  alineación horizontal  */
+  background-color: rgb(19, 3, 20); /*  color de fondo  */
+
+  text-transform: uppercase; /*  texto en mayúsculas  */
+  font-size: 54px; /*  tamaño de fuente  */
 }
