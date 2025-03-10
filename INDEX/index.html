@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/CSS/style.css" />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <title>TIENDA</title>
+    <link
+      rel="icon"
+      href="https://th.bing.com/th/id/OIP.c3ahmKpHysXIACwRB2rZSQHaHa?rs=1&pid=ImgDetMain"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="nav-menu">
+        <nav>
+          <!--  para las barras de navegación -->
+          <ul class="container">
+            <li><a href="#" class="menu-item">Home</a></li>
+            <li><a href="#" class="menu-item">About</a></li>
+            <li><a href="#" class="menu-item">Services</a></li>
+            <li>
+              <a href="/INDEX/contact.html" class="menu-item" target="_blank"
+                >Contact</a
+              >
+            </li>
+            <li><a href="#" class="menu-item">gallery</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Input de búsqueda de marcas -->
+      <div class="search-container">
+        <input
+          type="text"
+          id="search-brand"
+          class="search-input"
+          placeholder="Buscar por marca..."
+        />
+        <button type="submit" class="boton-buscar">BUSCAR</button>
+      </div>
+    </header>
+
+    <section>
+      <form>
+        <div class="div-items">
+          <h3>MONASTERY</h3>
+          <div class="div-items1" data-precio="150.000"></div>
+          <img
+            src="https://th.bing.com/th/id/OIP.c3ahmKpHysXIACwRB2rZSQHaHa?rs=1&pid=ImgDetMain"
+            alt=""
+          />
+          <p><strong>150.000</strong></p>
+          <button type="submit" class="btn" onclick="btn()">Comprar</button>
+        </div>
+
+        <div class="div-items">
+          <h3>MONASTERY</h3>
+          <div class="div-items1" id="Images" data-precio="150.000"></div>
+          <img
+            src="https://th.bing.com/th/id/OIP.c3ahmKpHysXIACwRB2rZSQHaHa?rs=1&pid=ImgDetMain"
+            alt=""
+          />
+
+          <p><strong>150.000</strong></p>
+          <button type="submit" class="btn" onclick="btn()">Comprar</button>
+        </div>
+
+        <div class="div-items">
+          <h3>MONASTERY</h3>
+          <div class="div-items1" id="Images" data-precio="150.000"></div>
+          <img
+            src="https://th.bing.com/th/id/OIP.c3ahmKpHysXIACwRB2rZSQHaHa?rs=1&pid=ImgDetMain"
+            alt=""
+          />
+          <p><strong>150.000</strong></p>
+          <button type="submit" class="btn" onclick="btn()">Comprar</button>
+        </div>
+
+        <div class="div-items">
+          <h3>MONASTERY</h3>
+          <div class="div-items1" id="Images" data-precio="150.000"></div>
+          <img
+            src="https://th.bing.com/th/id/OIP.c3ahmKpHysXIACwRB2rZSQHaHa?rs=1&pid=ImgDetMain"
+            alt=""
+          />
+          <p><strong>150.000</strong></p>
+          <button type="submit" class="btn" onclick="btn()">Comprar</button>
+        </div>
+
+        <div class="div-items">
+          <h3>MONASTERY</h3>
+          <div class="div-items1" id="Images" data-precio="150.000"></div>
+          <img
+            src="https://th.bing.com/th/id/OIP.c3ahmKpHysXIACwRB2rZSQHaHa?rs=1&pid=ImgDetMain"
+            alt=""
+          />
+          <p><strong>150.000</strong></p>
+          <button type="submit" class="btn" onclick="btn()">Comprar</button>
+        </div>
+      </form>
+    </section>
+
+    <script src="/JS/test.js"></script>
+  </body>
+</html>

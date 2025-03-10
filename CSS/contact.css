@@ -1,0 +1,47 @@
+* {
+  margin: 0%;
+  padding: 0%;
+
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  margin: 0%;
+  padding: 0%;
+  line-height: 1.6;
+  min-height: 100vh;
+  background: linear-gradient(#000, #be1865);
+}
+
+input {
+  color: black solid;
+  font-size: 30px;
+  text-align: center;
+  margin-top: 20px;
+  border-radius: 15px;
+  text-transform: uppercase;
+}
+h2 {
+  color: #6518be;
+  font-size: 30px;
+  text-align: center;
+  margin-top: 20px;
+}
+h3 {
+  color: white;
+  font-size: 23px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Contact Section */
+.btn {
+  background-color: black;
+  border-radius: 15px;
+  color: #6518be;
+  font-size: 25px;
+}
+.btn:hover {
+  background-color: #18beb6;
+  color: black;
+}
