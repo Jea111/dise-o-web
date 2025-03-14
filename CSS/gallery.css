@@ -61,3 +61,21 @@ h1 {
   text-transform: uppercase; /*  texto en mayúsculas  */
   font-size: 54px; /*  tamaño de fuente  */
 }
+h3,
+input,
+search {
+  font-size: 32px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  border-radius: 15px;
+  border: #6518be;
+}
+.btnSearch {
+  background-color: black;
+  border-radius: 15px;
+  color: #be1865;
+  font-size: 25px;
+}
+.btnSearch:hover {
+  background-color: #18be58;
+  color: aliceblue;
+}
