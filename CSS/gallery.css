@@ -1,81 +1,88 @@
+/* Reajuste general de la tipografía */
 * {
-  margin: auto;
-  padding: 0%;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* Estilo general de la página */
 body {
+  font-size: 1rem;
+  line-height: 1.5;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Estilo para los productos */
+.producto {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   font-family: "Times New Roman", Times, serif;
-  margin: 0%;
-  padding: 0%;
-  line-height: 1.6;
-  min-height: 100vh;
-  background: linear-gradient(#000, #be1865);
+  font-size: 1.5rem;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 15px 0;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-.div-items {
-  background-color: linear-gradient(#000, #be1865);
-  color: white;
 
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  margin: 1rem;
-  width: 30%;
-  height: 30%;
-  text-align: center;
-  padding: 1rem;
-}
-.btn {
-  background-color: black;
-  border-radius: 15px;
-  color: #6518be;
-  font-size: 25px;
-}
-.btn:hover {
-  background-color: green;
-  color: white;
-}
-.label,
-h3,
-input,
-p {
-  font-size: 32px;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  border-radius: 15px;
-  border: #6518be;
-}
+/* Ajustar la imagen de los productos */
 img {
-  width: 100%;
-  height: 100%;
+  width: 120px;
+  height: auto;
+  border-radius: 8px;
 }
-header,
-h1 {
-  display: flex; /*  pantalla flexible  */
-  font-family: "Big Shoulders Stencil", cursive;
-  color: #be1865;
-  align-items: center; /*  alineación central  */
-  height: 80px; /*  altura del contenedor  */
 
-  justify-content: space-between; /*  alineación horizontal  */
-  background-color: rgb(19, 3, 20); /*  color de fondo  */
-
-  text-transform: uppercase; /*  texto en mayúsculas  */
-  font-size: 54px; /*  tamaño de fuente  */
-}
+/* Estilo para los títulos y precios de los productos */
 h3,
-input,
-search {
-  font-size: 32px;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  border-radius: 15px;
-  border: #6518be;
+p,
+span {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.2rem;
+  color: #333;
+  line-height: 1.4rem;
 }
-.btnSearch {
-  background-color: black;
-  border-radius: 15px;
-  color: #be1865;
-  font-size: 25px;
+
+/* Estilo de los botones de compra */
+.btnCompra {
+  background-color: #333;
+  color: white;
+  font-size: 1.2rem;
+  border-radius: 25px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
-.btnSearch:hover {
-  background-color: #18be58;
-  color: aliceblue;
+
+.btnCompra:hover {
+  background-color: #4caf50;
+  color: black;
+}
+
+/* Estilo del carrito de compras */
+.carrito {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+}
+
+#productosCarrito {
+  margin-top: 20px;
+  padding: 10px;
+}
+
+#total {
+  font-size: 1.5rem;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
 }

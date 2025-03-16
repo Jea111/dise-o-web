@@ -1,43 +1,69 @@
-function botonCompra() {
-  let buttons = document.querySelectorAll(".btn"); // Seleccionas todos los  botones con la clase 'btn'
+// Obtención de los elementos
+const botonesCompra = document.querySelectorAll(".btnCompra");
+const carrito = [];
+const contenedorCarrito = document.getElementById("productosCarrito");
+const totalElemento = document.getElementById("totalPrecio");
 
-  // Verificamos si se encuentra el botón antes de asignarle el evento
-  // //asignar a todos los botones con el (.length > 0)
-  if (buttons.length > 0) {
-    // Utilizamos forEach para iteratuar sobre cada botón encontrado y agregarle un evento click.
-    buttons.forEach((button) => {
-      // Iteramos sobre cada botón
-      button.addEventListener("click", function () {
-        swal("¡STOCK DISPONIBLE!", "CONFIRMANDO COMPRA", "success");
-      });
+function agregarAlCarrito() {
+  botonesCompra.forEach((boton) => {
+    boton.addEventListener("click", (e) => {
+      // Obtener el producto donde se hizo clic
+      const producto = e.target.closest(".producto"); // Busca el elemento más cercano con la clase '.producto' al elemento que disparó el evento.
+      const nombre = producto.querySelector("h3").textContent;
+      const precio = producto.querySelector(".precio").textContent;
+      const id = producto.dataset.id; // Obtiene el valor del atributo 'data-id' de 'producto'.
+
+      // Crear un objeto con los detalles del producto
+      const productoCarrito = {
+        id: id,
+        nombre: nombre,
+        precio: precio,
+      };
+
+      // Agregar el producto al carrito
+      carrito.push(productoCarrito);
+
+      swal("Producto agregado: " + nombre);
+      // Actualizar la vista del carrito
+      actualizarCarrito();
     });
-  } else {
-    console.log("No se encontró el botón");
-  }
-}
-
-botonCompra();
-
-function btnSearch() {
-  let search = document.querySelector(".btnSearch");
-
-  search.addEventListener("click", function () {
-    swal("producto encontrado", "confima la compra", "success");
   });
 }
-btnSearch();
 
-// function busqueda() {
-//   let input = document.querySelector(".search-container"); // Seleccionamos el campo de texto del input
-//   input.addEventListener("input", function () {
-//     let searchValue = input.value.toLowerCase(); // Obtenemos el valor del input, pasamos a minúsculas para la comparación
+function actualizarCarrito() {
+  contenedorCarrito.innerHTML = ""; // Limpiar el carrito antes de mostrar los productos
 
-//     if (searchValue === "adidas") {
-//       swal("Producto encontrado", "Confirma la compra", "success");
-//     } else if (searchValue === "nike") {
-//       swal("Producto no disponible");
-//     } else {
-//       swal("Producto no encontrado");
-//     }
-//   });
-// }
+  let total = 0;
+
+  // Mostrar los productos en el carrito
+  carrito.forEach((producto) => {
+    const divProducto = document.createElement("div");
+    divProducto.classList.add("productoCarrito");
+    divProducto.innerHTML = `
+      <h3>${producto.nombre}</h3>
+      <p>Precio: ${producto.precio}</p>
+    `;
+    contenedorCarrito.appendChild(divProducto);
+
+    // Calcular el total
+    total += parseFloat(producto.precio.replace(".", "").replace(",", "."));
+  });
+
+  // Mostrar el total
+  totalElemento.textContent = total.toLocaleString("es-CO");
+}
+
+agregarAlCarrito();
+
+let finalizarCompra = document.querySelector("#btnFinish");
+
+function finish() {
+  if (contenedorCarrito != "") {
+    finalizarCompra.addEventListener("click", () => {
+      swal("compra finalizada", "Gracias por visitarnos", "success");
+    });
+  } else {
+    swal("debes agregar un producto");
+  }
+}
+finish();
