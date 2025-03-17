@@ -58,7 +58,7 @@ agregarAlCarrito();
 let finalizarCompra = document.querySelector("#btnFinish");
 
 function finish() {
-  if (contenedorCarrito != "") {
+  if (contenedorCarrito.length != 0) {
     finalizarCompra.addEventListener("click", () => {
       swal("compra finalizada", "Gracias por visitarnos", "success");
     });
