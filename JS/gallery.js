@@ -31,7 +31,7 @@ function agregarAlCarrito() {
 }
 
 function actualizarCarrito() {
-  contenedorCarrito.innerHTML = ""; // Limpiar el carrito antes de mostrar los productos
+  contenedorCarrito.innerHTML = ``; // Limpiar el carrito antes de mostrar los productos
 
   let total = 0;
 
@@ -67,3 +67,5 @@ function finish() {
   }
 }
 finish();
+
+
