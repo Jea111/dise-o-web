@@ -86,3 +86,38 @@ h2 {
   margin-bottom: 20px;
   color: #333;
 }
+
+@media (max-width: 437px) {
+  .producto {
+    flex-direction: column;
+    align-items: center;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  h3,
+  p,
+  em,
+  span {
+    justify-content: space-between;
+    margin: 10px;
+    padding: 10px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    font-size: 25px;
+    color: orangered;
+  }
+}
+
+.btnEliminar {
+  background-color: #333;
+  color: white;
+  box-shadow: 3px 3px 3px #000;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.btnEliminar:hover {
+  background-color: #cc0000;
+}

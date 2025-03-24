@@ -6,6 +6,7 @@ function btn() {
 
 function btnSearch() {
   const search = document.getElementById("search");
+  carrito.push(search);
   if (search == "monclear") {
     swal("¡Producto no encontrado!", "¡Intente nuevamente!", "error");
   } else if (search == "adidas") {
