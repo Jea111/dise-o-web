@@ -1,3 +1,9 @@
+swal(
+  "WELCOME TO THE WEB SITE OF REGISTER ",
+  "ADD TO INFORMATION IN THE FORM",
+  "success"
+);
+
 function btnData() {
   let buttons = document.querySelector(".btn");
 

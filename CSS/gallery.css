@@ -10,7 +10,7 @@
 body {
   font-size: 1rem;
   line-height: 1.5;
-  background-color: #f4f4f4;
+  background-color: #be1865;
   color: #333;
 }
 
@@ -24,7 +24,7 @@ body {
   border-radius: 10px;
   padding: 15px;
   margin: 15px 0;
-  background-color: #fff;
+  background-color: #be1865;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease-in-out;
 }
@@ -42,7 +42,7 @@ p,
 span {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 1.2rem;
-  color: #333;
+  color: white;
   line-height: 1.4rem;
 }
 
@@ -64,7 +64,7 @@ span {
 
 /* Estilo del carrito de compras */
 .carrito {
-  background-color: #fff;
+  background-color: #be1865;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -85,7 +85,7 @@ span {
 h2 {
   font-size: 2rem;
   margin-bottom: 20px;
-  color: #333;
+  color: white;
 }
 
 @media (max-width: 437px) {
@@ -106,7 +106,7 @@ h2 {
     margin-bottom: 6px;
     font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
     font-size: 25px;
-    color: orangered;
+    color: white;
   }
 }
 
