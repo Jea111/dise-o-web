@@ -1,3 +1,8 @@
+:root {
+  --txt-color: white;
+  --txt-font: bold;
+}
+
 * {
   margin: 0;
   padding: 0%;
@@ -19,27 +24,144 @@ body {
   flex-direction: row; /*  dirección de los elementos  */
   align-items: center; /*  alineación central  */
   height: 100px; /*  altura del contenedor  */
-
-  justify-content: space-between; /*  alineación horizontal  */
+  width: 100%; /*  ancho del contenedor  */
+  justify-content: space-around; /*  alineación horizontal  */
   gap: 14px;
 
   text-transform: uppercase; /* texto en mayúsculas */
   font-size: 23px; /*  tamaño de fuente  */
 }
-
-.nav-menu,
+.container,
+li,
 a {
-  text-decoration: none;
+  list-style: none; /*  sin viñetas  */
+  text-decoration: none; /*  sin subrayado  */
+  color: var(--txt-color); /* color del texto */
+  font-weight: bold; /*  negrita  */
+}
+.container:hover {
+  background: linear-gradient(#000, #be1865);
+
+  box-shadow: 0 0 10px #be1865;
+  border-radius: 10px;
 }
 
-@media (max-width: 511px) {
-  header,
-  nav,
+.nav-menu,
+a:hover {
+  text-decoration: none;
+  color: red;
+}
+
+@media (max-width: 768px) {
   .container {
-    flex-direction: column;
+    flex-direction: space-around; /*  dirección de los elementos  */
+    justify-content: center; /*  alineación horizontal  */
     margin-top: 15px;
     align-items: center;
     text-decoration: none;
     list-style: none;
   }
+  .container:hover {
+    background: linear-gradient(#000, #be1865);
+
+    box-shadow: 0 0 10px #be1865;
+    border-radius: 10px;
+  }
+
+  .menu-item {
+    display: flex; /*  pantalla flexible  */
+    flex-direction: row; /*  dirección de los elementos  */
+    align-items: center; /*  alineación central  */
+    color: var(--txt-color);
+    height: 100px; /*  altura del contenedor  */
+    width: 100%; /*  ancho del contenedor  */
+    justify-content: space-around; /*  alineación horizontal  */
+    gap: 14px;
+    margin-top: 20px;
+
+    font-size: 17px; /*  tamaño de fuente  */
+  }
+  .menu-item:hover {
+    background: linear-gradient(#000, #be1865);
+    box-shadow: 0 0 10px #be1865;
+    border-radius: 10px;
+  }
+  .menu-item a {
+    text-decoration: none; /*  sin subrayado  */
+    color: var(--txt-color); /* color del texto */
+    font-weight: bold; /*  negrita  */
+  }
+}
+
+.banner {
+  height: 500px;
+
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.banner-content {
+  padding: 20px;
+}
+
+.banner p {
+  font-size: 1.8em;
+  margin-bottom: 30px;
+  color: var(--txt-color);
+  font-weight: var(--txt-font);
+  border-radius: 15px;
+
+  text-shadow: 0 0 10px #be1865, 0 0 20px #be1865, 0 0 30px #be1865,
+    0 0 40px #be1865, 0 0 50px #be1865, 0 0 60px #be1865, 0 0 70px #be1865;
+}
+
+.cta-button {
+  background-color: #be1865;
+  color: var(--txt-color);
+  padding: 15px 30px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background-color 0.3s; /*  transición de color  */
+}
+
+.cta-button:hover {
+  background-color: #f3f3f3;
+  color: #000000;
+}
+
+@media (max-width: 768px) {
+  .banner h1 {
+    font-size: 2.5em;
+  }
+  .bnr-img {
+    width: 100%; /*  ancho de la imagen  */
+    height: 100%;
+    object-fit: cover; /*  ajuste de la imagen  */
+    position: absolute; /*  posición absoluta  */
+    top: 0; /*  parte superior  */
+    left: 0; /*  parte izquierda  */
+    z-index: -1; /*  índice z negativo  */
+    filter: blur(2.1px); /*  desenfoque  */
+    opacity: 0.7; /*  opacidad  */
+    transition: opacity 0.3s ease-in-out; /*  transición de opacidad  */
+  }
+}
+
+.bnr-img {
+  width: 100%; /*  ancho de la imagen  */
+  height: 100%;
+  object-fit: cover; /*  ajuste de la imagen  */
+  position: absolute; /*  posición absoluta  */
+  top: 0; /*  parte superior  */
+  left: 0; /*  parte izquierda  */
+  z-index: -1; /*  índice z negativo  */
+  filter: blur(2.1px); /*  desenfoque  */
+  opacity: 0.7; /*  opacidad  */
+  transition: opacity 0.3s ease-in-out; /*  transición de opacidad  */
 }

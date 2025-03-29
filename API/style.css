@@ -9,8 +9,13 @@
 }
 body {
   border-radius: 15px;
-  background-color: var(--bg-color);
+  /* background-color: var(--bg-color); */
   color: var(--color-text);
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.8),
+    rgba(168, 15, 15, 0.849)
+  );
 }
 .episodios div,
 .personajes div {
