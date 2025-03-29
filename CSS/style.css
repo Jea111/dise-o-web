@@ -161,7 +161,7 @@ a:hover {
   top: 0; /*  parte superior  */
   left: 0; /*  parte izquierda  */
   z-index: -1; /*  índice z negativo  */
-  filter: blur(3px); /*  desenfoque  */
+  filter: blur(1%); /*  desenfoque  */
   opacity: 0.7; /*  opacidad  */
   transition: opacity 0.3s ease-in-out; /*  transición de opacidad  */
 }
