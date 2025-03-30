@@ -39,4 +39,4 @@
 // }
 // btnSearch();
 
-swal("Bienvenido a la tienda de ropa", "¡Gracias por visitarnos!", "success");
+swal("WELCOME TO NIKE NEW YORK", "ADD TO CART YOUR  FAV SHOES !", "success");

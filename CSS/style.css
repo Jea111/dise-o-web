@@ -17,8 +17,19 @@ body {
   min-height: 100vh;
   background: linear-gradient(#000, #be1865);
 }
+h1 {
+  color: white;
+  line-height: 1.8em;
+  font-size: 80%; /*  tamaño de fuente  */
+  text-align: center;
+  text-transform: uppercase; /* texto en mayúsculas */
+  font-size: 2.5em; /*  tamaño de fuente  */
+  font-weight: var(--txt-font); /*  negrita  */
+  text-shadow: 0 0 10px #be1865, 0 0 20px #be1865, 0 0 30px #be1865,
+    0 0 40px #be1865, 0 0 50px #be1865, 0 0 60px #be1865, 0 0 70px #be1865;
+}
 
-.container {
+.menu-toggle {
   text-decoration: none;
   display: flex; /*  pantalla flexible  */
   flex-direction: row; /*  dirección de los elementos  */
@@ -31,29 +42,29 @@ body {
   text-transform: uppercase; /* texto en mayúsculas */
   font-size: 23px; /*  tamaño de fuente  */
 }
-.container,
-li,
+.menu-toggle,
 a {
   list-style: none; /*  sin viñetas  */
   text-decoration: none; /*  sin subrayado  */
   color: var(--txt-color); /* color del texto */
   font-weight: bold; /*  negrita  */
 }
-.container:hover {
+.menu-toggle:hover {
   background: linear-gradient(#000, #be1865);
 
   box-shadow: 0 0 10px #be1865;
   border-radius: 10px;
 }
 
-.nav-menu,
+.sidebar,
 a:hover {
   text-decoration: none;
   color: red;
 }
 
 @media (max-width: 768px) {
-  .container {
+  .menu-toggle,
+  .menu-icon {
     flex-direction: space-around; /*  dirección de los elementos  */
     justify-content: center; /*  alineación horizontal  */
     margin-top: 15px;
@@ -61,35 +72,12 @@ a:hover {
     text-decoration: none;
     list-style: none;
   }
-  .container:hover {
+  .menu-toggle,
+  .menu-icon:hover {
     background: linear-gradient(#000, #be1865);
 
     box-shadow: 0 0 10px #be1865;
     border-radius: 10px;
-  }
-
-  .menu-item {
-    display: flex; /*  pantalla flexible  */
-    flex-direction: row; /*  dirección de los elementos  */
-    align-items: center; /*  alineación central  */
-    color: var(--txt-color);
-    height: 100px; /*  altura del contenedor  */
-    width: 100%; /*  ancho del contenedor  */
-    justify-content: space-around; /*  alineación horizontal  */
-    gap: 14px;
-    margin-top: 20px;
-
-    font-size: 17px; /*  tamaño de fuente  */
-  }
-  .menu-item:hover {
-    background: linear-gradient(#000, #be1865);
-    box-shadow: 0 0 10px #be1865;
-    border-radius: 10px;
-  }
-  .menu-item a {
-    text-decoration: none; /*  sin subrayado  */
-    color: var(--txt-color); /* color del texto */
-    font-weight: bold; /*  negrita  */
   }
 }
 
@@ -161,7 +149,67 @@ a:hover {
   top: 0; /*  parte superior  */
   left: 0; /*  parte izquierda  */
   z-index: -1; /*  índice z negativo  */
-  filter: blur(1%); /*  desenfoque  */
+  filter: blur(3px); /*  desenfoque  */
   opacity: 0.7; /*  opacidad  */
   transition: opacity 0.3s ease-in-out; /*  transición de opacidad  */
+}
+
+#menu-toggle {
+  display: none; /*  ocultar el menú  */
+}
+
+.menu-icon {
+  font-size: 30px;
+  cursor: pointer;
+  padding: 10px;
+  background-color: #111;
+  color: var(--txt-color);
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 2;
+  width: 55px; /*  ancho del icono  */
+  height: 55px; /*  altura del icono  */
+  display: flex; /*  pantalla flexible  */
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+}
+.menu-icon::before {
+  content: "\2630"; /*  icono de menú  */
+  font-size: 30px; /*  tamaño del icono  */
+  color: #be1865; /*  color del icono  */
+}
+#menu-toggle:checked + .menu-icon::before {
+  content: "\2715"; /*  icono de cerrar  */
+  font-size: 30px; /*  tamaño del icono  */
+  color: #be1865; /*  color del icono  */
+}
+.sidebar {
+  height: 100vh; /*  altura de la barra lateral  */
+  width: 250px; /*  ancho de la barra lateral  */
+  position: fixed; /*  posición fija  */
+  top: 0; /*  parte superior  */
+  left: -250px; /*  parte izquierda  */
+  background-color: #111; /*  color de fondo  */
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none; /*  sin subrayado  */
+  font-size: 25px; /*  tamaño de fuente  */
+  color: var(--txt-color); /* color del texto */
+  display: block; /*  bloque  */
+  transition: 0.3s; /*  transición  */
+}
+.sidebar a:hover {
+  color: var(--txt-color); /*  color de fondo  */
+  background-color: #be1865; /*  color de fondo  */
+  font-family: var(--txt-font); /*  negrita  */
+}
+#menu-toggle:checked + .menu-icon + .sidebar {
+  left: 0; /*  parte izquierda  */
 }

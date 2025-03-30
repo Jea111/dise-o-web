@@ -1,8 +1,9 @@
-swal(
-  "WELCOME TO THE WEB SITE OF REGISTER ",
-  "ADD TO INFORMATION IN THE FORM",
-  "success"
-);
+swal({
+  title: "BIENVENIDO A LA PÁGINA DE ENVIOS",
+  text: "NO OLVIDES QUE ESTO ES UNA DEMOSTRACIÓN",
+  button: "cerrar",
+  icon: "info",
+});
 
 function btnData() {
   let buttons = document.querySelector(".btn");
