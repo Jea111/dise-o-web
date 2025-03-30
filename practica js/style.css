@@ -1,0 +1,210 @@
+:root {
+  --txt-color: white;
+  --bg-color: #1a1a1a;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--bg-color);
+  color: var(--txt-color);
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+img {
+  width: 100%; /*  ancho de la imagen  */
+  height: 100%;
+  object-fit: cover; /*  ajuste de la imagen  */
+  position: absolute; /*  posición absoluta  */
+  top: 0; /*  parte superior  */
+  left: 0; /*  parte izquierda  */
+  z-index: -1; /*  índice z negativo  */
+  filter: blur(3px); /*  desenfoque  */
+  opacity: 0.7; /*  opacidad  */
+  transition: opacity 0.3s ease-in-out; /*  transición de opacidad  */
+}
+
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  background-color: var(--bg-color);
+  color: var(--txt-color);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 20px;
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  z-index: 1;
+  border-bottom: 2px solid var(--txt-color);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.navbar:hover {
+  background-color: var(--txt-color);
+  color: var(--bg-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+  font-size: 32px; /* tamaño de la fuente */
+  font-weight: 700; /* peso de la fuente */
+  text-transform: uppercase;
+  letter-spacing: 2px; /* espacio entre letras */
+  transition: all 0.3s ease; /* tiempo de la animación */
+}
+
+.navbar a {
+  color: var(--txt-color);
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.navbar a:hover {
+  color: var(--bg-color);
+  background-color: var(--txt-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+  font-size: 32px; /* tamaño de la fuente */
+  font-weight: 700; /* peso de la fuente */
+  text-transform: uppercase;
+  letter-spacing: 2px; /* espacio entre letras */
+  transition: all 0.3s ease; /* tiempo de la animación */
+}
+
+.navbar a.active {
+  color: var(--bg-color);
+  background-color: var(--txt-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+  font-size: 32px; /* tamaño de la fuente */
+  font-weight: 700; /* peso de la fuente */
+  text-transform: uppercase;
+  letter-spacing: 2px; /* espacio entre letras */
+  transition: all 0.3s ease; /* tiempo de la animación */
+}
+.navbar a.active:hover {
+  color: var(--bg-color);
+  background-color: var(--txt-color);
+  transform: translateY(-2px); /* mueve el elemento hacia arriba */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* sombra del elemento */
+  text-decoration: none; /* quita el subrayado */
+  font-size: 32px; /* tamaño de la fuente */
+  font-weight: 700; /* peso de la fuente */
+  text-transform: uppercase;
+  letter-spacing: 2px; /* espacio entre letras */
+  transition: all 0.3s ease; /* tiempo de la animación */
+}
+
+.navbar a.active:before {
+  content: "\2630"; /* contenido del pseudo elemento */
+  position: absolute; /* posición absoluta */
+  top: 0; /* parte superior */
+  left: 0; /* parte izquierda */
+  width: 100%; /* ancho del elemento */
+  height: 100%; /* altura del elemento */
+  overflow-x: hidden;
+  background-color: var(--txt-color); /* color de fondo */
+  opacity: 0.5; /* opacidad del elemento */
+  z-index: -1; /* z-index del elemento */
+}
+.navbar a.active:after {
+  content: "\2715"; /* contenido del pseudo elemento */
+  position: absolute; /* posición absoluta */
+  top: 0; /* parte superior */
+  left: 0; /* parte izquierda */
+  width: 100%; /* ancho del elemento */
+  height: 100%; /* altura del elemento */
+  background-color: var(--txt-color); /* color de fondo */
+  opacity: 0.5; /* opacidad del elemento */
+  z-index: -1; /* z-index del elemento */
+}
+h1 {
+  font-size: 1.8em;
+  margin-bottom: 30px;
+  color: var(--txt-color);
+  font-weight: var(--txt-font);
+  border-radius: 15px;
+
+  text-shadow: 0 0 10px #be1865, 0 0 20px #be1865, 0 0 30px #be1865,
+    0 0 40px #be1865, 0 0 50px #be1865, 0 0 60px #be1865, 0 0 70px #be1865; /* sombra del texto */
+  text-decoration: none; /* quita el subrayado */
+  text-align: center; /* alinea el texto al centro */
+  text-transform: uppercase; /* transforma el texto a mayúsculas */
+  letter-spacing: 2px; /* espacio entre letras */
+  transition: all 0.3s ease; /* tiempo de la animación */
+  cursor: pointer; /* cursor de mano */
+}
+p {
+  text-align: center; /* alinea el texto al centro */
+  text-transform: uppercase; /* transforma el texto a mayúsculas */
+  font-size: 1.2em; /* tamaño de la fuente */
+  margin-bottom: 30px; /* margen inferior de 30px */
+  color: var(--txt-color); /* color del texto */
+  font-weight: var(--txt-font); /* peso de la fuente */
+  border-radius: 15px; /* borde redondeado de 15px */
+  text-shadow: 0 0 10px #be1865, 0 0 20px #be1865, 0 0 30px #be1865,
+    0 0 40px #be1865, 0 0 50px #be1865, 0 0 60px #be1865, 0 0 70px #be1865; /* sombra del texto */
+  left: 30px; /* margen izquierdo de 30px */
+  right: 30px; /* margen izquierdo y derecho de 30px */
+  top: 30px; /* margen superior de 30px */
+}
+@media (max-width: 768px) {
+  body {
+    justify-content: center; /* centra el contenido horizontalmente */
+
+    justify-content: center; /* centra el contenido verticalmente */
+    align-items: center; /* centra el contenido horizontalmente */
+  }
+  .navbar {
+    display: flex; /* muestra el navbar como un flexbox */
+    justify-content: space-around;
+    flex-direction: row; /* cambia la dirección del flex a columna */
+    height: auto; /* altura automática */
+
+    padding: 10px; /* padding de 10px */
+    background-color: transparent;
+  }
+  .navbar a {
+    right: 10px; /* margen derecho de 10px */
+    left: 10px; /* margen izquierdo de 10px */
+    top: 10px; /* margen superior de 10px */
+    bottom: 10px; /* margen inferior de 10px */
+
+    font-size: 13px;
+  }
+  h1 {
+    font-size: 10px;
+  }
+  img {
+    width: 100%; /* ancho de la imagen */
+    height: 100%;
+    object-fit: cover; /* ajuste de la imagen */
+    position: absolute; /* posición absoluta */
+    top: 0; /* parte superior */
+    left: 0; /* parte izquierda */
+    z-index: -1; /* índice z negativo */
+    filter: blur(8px); /* desenfoque */
+    opacity: 0.7; /* opacidad */
+    transition: opacity 0.3s ease-in-out; /* transición de opacidad */
+  }
+}
