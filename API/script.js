@@ -53,3 +53,8 @@ fetch(url3)
     });
   })
   .catch((error) => console.log("el error es:", error));
+
+function cambiarColor() {
+  let colorAleatorio = "#" + Math.floor(Math.random() * 16777215).toString(16);
+  document.body.style.backgroundColor = colorAleatorio;
+}
